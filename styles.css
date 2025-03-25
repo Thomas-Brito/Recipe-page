@@ -1,0 +1,126 @@
+:root {
+  /*Cores*/
+  --branco: hsl(0, 0%, 100%);
+  --marrom-800: hsl(14, 45%, 36%);
+  --pedra-100: hsl(30, 54%, 90%);
+  --pedra-150: hsl(30, 18%, 87%);
+  --pedra-600: hsl(30, 10%, 34%);
+  --pedra-900: hsl(24, 5%, 18%);
+  --rosa-50: hsl(330, 100%, 98%);
+  --rosa-800: hsl(332, 51%, 32%);
+
+  /*Fontes*/
+  --fonte-1: 400 clamp(1.875rem, 1.69642857142857rem + 0.892857142857143vw, 2.5rem)/150% "Young Serif";
+  --fonte-2: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit";
+  --fonte-3: 600 clamp(1rem, 0.964285714285714rem + 0.178571428571429vw, 1.125rem)/150% "Outfit";
+  --fonte-4: 700 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit";
+  --fonte-5: 400 clamp(1.25rem, 1.14285714285714rem + 0.535714285714286vw, 1.625rem)/150% "Young Serif";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: var(--pedra-100);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.fonte-1 { font: var(--fonte-1); }
+.fonte-2 { font: var(--fonte-2); }
+.fonte-3 { font: var(--fonte-3); }
+.fonte-4 { font: var(--fonte-4); }
+.fonte-5 { font: var(--fonte-5); }
+
+.cor-pedra-600 { color: var(--pedra-600); }
+.cor-pedra-900 { color: var(--pedra-900); }
+.cor-marrom, ol li::marker, ul li::marker { color: var(--marrom-800); }
+.cor-rosa, aside ul li::marker { color: var(--rosa-800); }
+
+main {
+  background-color: var(--branco);
+  border-radius: 1.5rem;
+  width: clamp(20rem, 95vw, 46rem);
+}
+
+img {
+  border-radius: 0.5rem;
+  max-width: 90%;
+  margin: min(2.5rem, 5%) min(2.5rem, 5%) 0;
+}
+
+article {
+  padding: 0 min(2.5rem, 5%) min(2.5rem, 5%);
+}
+
+aside {
+  background-color: var(--rosa-50);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem 0.5rem;
+}
+
+h1, h2 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 0.1rem solid var(--pedra-150);
+}
+
+ol, ul {
+  margin-top: 0;
+  padding: 0 1rem;
+}
+
+li {
+  padding: 1rem 0 0 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border-bottom: 0.1rem solid var(--pedra-150);
+  color: var(--pedra-600);
+  font: var(--fonte-2);
+  padding: 1rem;
+}
+
+.sem-borda {
+  border-bottom: none;
+}
+
+@media only screen and (max-width: 426px) {
+  main {
+    border-radius: 0;
+    width: 100%;
+  }
+  img {
+    border-radius: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+/* .attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
