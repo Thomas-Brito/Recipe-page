@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light-dark">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -10,66 +10,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet"/>
   <title>Frontend Mentor | Recipe page</title>
 </head>
-<body>
-  <main>
+
+<body class="cor-fundo-1">
+
+  <aside id="minha-modal" class="modal">
+    <div class="conteudo-modal cor-fundo-1">
+      <p class="fonte-5 cor-fonte-2">Choose the theme:</p>
+      <span class="fechar-modal fonte-5 cor-fonte-2">&times;</span>
+      <form>
+        <input type="radio" id="default" name="tema" value="light-dark" checked/>
+        <label for="default" class="fonte-6 cor-fonte-1">System default</label><br/>
+        <input type="radio" id="light" name="tema" value="light"/>
+        <label for="light" class="fonte-6 cor-fonte-1">Light</label><br/>
+        <input type="radio" id="dark" name="tema" value="dark"/>
+        <label for="dark" class="fonte-6 cor-fonte-1">Dark</label><br/>
+      </form>
+    </div>
+  </aside>
+  <button id="abrir-modal" class="tema" title="Theme">&#127763;</button>
+
+  <main class="cor-fundo-2">
     <img alt="Omelette color photo" src="assets/images/image-omelette.jpeg"/>
     <article>
       <section>
-        <h1 class="fonte-1 cor-pedra-900">Simple Omelette Recipe</h1>
+        <h1 class="fonte-1 cor-fonte-2">Simple Omelette Recipe</h1>
         
-        <p class="fonte-2 cor-pedra-600">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+        <p class="fonte-2 cor-fonte-1">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
       </section>
-      <aside>
-        <span class="fonte-3 cor-rosa">Preparation time</span>
+      <aside class="cor-fundo-3">
+        <span class="fonte-3 cor-fonte-4">Preparation time</span>
         
         <ul>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Total: </span>Approximately 10 minutes</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Preparation: </span>5 minutes</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Cooking: </span>5 minutes</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Total: </span>Approximately 10 minutes</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Preparation: </span>5 minutes</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Cooking: </span>5 minutes</li>
         </ul>
       </aside>
       <section>
-        <h2 class="fonte-5 cor-marrom">Ingredients</h2>
+        <h2 class="fonte-5 cor-fonte-3">Ingredients</h2>
         <ul>
-          <li class="fonte-2 cor-pedra-600">2-3 large eggs</li>
-          <li class="fonte-2 cor-pedra-600">Salt, to taste</li>
-          <li class="fonte-2 cor-pedra-600">Pepper, to taste</li>
-          <li class="fonte-2 cor-pedra-600">1 tablespoon of butter or oil</li>
-          <li class="fonte-2 cor-pedra-600">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          <li class="fonte-2 cor-fonte-1">2-3 large eggs</li>
+          <li class="fonte-2 cor-fonte-1">Salt, to taste</li>
+          <li class="fonte-2 cor-fonte-1">Pepper, to taste</li>
+          <li class="fonte-2 cor-fonte-1">1 tablespoon of butter or oil</li>
+          <li class="fonte-2 cor-fonte-1">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </section>
       <hr/>
       <section>
-        <h2 class="fonte-5 cor-marrom">Instructions</h2>
+        <h2 class="fonte-5 cor-fonte-3">Instructions</h2>
         <ol>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Beat the eggs: </span>In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Heat the pan: </span>Place a non-stick frying pan over medium heat and add butter or oil.</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Cook the omelette: </span>Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Add fillings (optional): </span>When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Fold and serve: </span>As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
-          <li class="fonte-2 cor-pedra-600"><span class="fonte-4">Enjoy: </span>Serve hot, with additional salt and pepper if needed.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Beat the eggs: </span>In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Heat the pan: </span>Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Cook the omelette: </span>Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Add fillings (optional): </span>When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Fold and serve: </span>As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Enjoy: </span>Serve hot, with additional salt and pepper if needed.</li>
         </ol>
       </section>
       <hr/>
       <section>
-        <h2 class="fonte-5 cor-marrom">Nutrition</h2>
-        <p class="fonte-2 cor-pedra-600">The table below shows nutritional values per serving without the additional fillings.</p>
+        <h2 class="fonte-5 cor-fonte-3">Nutrition</h2>
+        <p class="fonte-2 cor-fonte-1">The table below shows nutritional values per serving without the additional fillings.</p>
         <table>
           <tr>
-            <td>Calories</td>
-            <td class="fonte-4 cor-marrom">277kcal</td>
+            <td class="fonte-2 cor-fonte-1">Calories</td>
+            <td class="fonte-4 cor-fonte-3">277kcal</td>
           </tr>
           <tr>
-            <td>Carbs</td>
-            <td class="fonte-4 cor-marrom">0g</td>
+            <td class="fonte-2 cor-fonte-1">Carbs</td>
+            <td class="fonte-4 cor-fonte-3">0g</td>
           </tr>
           <tr>
-            <td>Protein</td>
-            <td class="fonte-4 cor-marrom">20g</td>
+            <td class="fonte-2 cor-fonte-1">Protein</td>
+            <td class="fonte-4 cor-fonte-3">20g</td>
           </tr>
           <tr>
-            <td class="sem-borda">Fat</td>
-            <td class="fonte-4 cor-marrom sem-borda">22g</td>
+            <td class="fonte-2 cor-fonte-1 sem-borda">Fat</td>
+            <td class="fonte-4 cor-fonte-3 sem-borda">22g</td>
           </tr>
         </table>
       </section>
@@ -79,5 +97,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="script.js"></script>
 </body>
 </html>

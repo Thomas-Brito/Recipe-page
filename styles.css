@@ -1,55 +1,148 @@
-:root {
-  /*Cores*/
-  --branco: hsl(0, 0%, 100%);
-  --marrom-800: hsl(14, 45%, 36%);
-  --pedra-100: hsl(30, 54%, 90%);
-  --pedra-150: hsl(30, 18%, 87%);
-  --pedra-600: hsl(30, 10%, 34%);
-  --pedra-900: hsl(24, 5%, 18%);
-  --rosa-50: hsl(330, 100%, 98%);
-  --rosa-800: hsl(332, 51%, 32%);
-
-  /*Fontes*/
-  --fonte-1: 400 clamp(1.875rem, 1.69642857142857rem + 0.892857142857143vw, 2.5rem)/150% "Young Serif";
-  --fonte-2: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit";
-  --fonte-3: 600 clamp(1rem, 0.964285714285714rem + 0.178571428571429vw, 1.125rem)/150% "Outfit";
-  --fonte-4: 700 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit";
-  --fonte-5: 400 clamp(1.25rem, 1.14285714285714rem + 0.535714285714286vw, 1.625rem)/150% "Young Serif";
-}
-
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
+:root {
+  color-scheme: light dark;
+
+  --fonte-1: 400 clamp(1.875rem, 1.69642857142857rem + 0.892857142857143vw, 2.5rem)/150% "Young Serif", serif;
+  --fonte-2: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif;
+  --fonte-3: 600 clamp(1rem, 0.964285714285714rem + 0.178571428571429vw, 1.125rem)/150% "Outfit", sans-serif;
+  --fonte-4: 700 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif;
+  --fonte-5: 400 clamp(1.25rem, 1.14285714285714rem + 0.535714285714286vw, 1.625rem)/150% "Young Serif", serif;
+  --fonte-6: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/200% "Outfit", sans-serif;
 }
 
-body {
-  align-items: center;
-  background-color: var(--pedra-100);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 320vh;
-  justify-content: center;
-  margin: auto;
+:root[data-theme='light'] {
+  --cor-fonte-1: hsl(30, 10%, 34%);
+  --cor-fonte-2: hsl(24, 5%, 18%);
+  --cor-fonte-3: hsl(14, 45%, 36%);
+  --cor-fonte-4: hsl(332, 51%, 32%);
+  --cor-fundo-1: hsl(30, 54%, 90%);
+  --cor-fundo-2: hsl(0, 0%, 100%);
+  --cor-fundo-3: hsl(330, 100%, 98%);
+  --cor-fundo-4: hsl(30, 18%, 87%);
 }
+
+:root[data-theme='dark'] {
+  --cor-fonte-1: hsl(30, 10%, 80%);
+  --cor-fonte-2: hsl(24, 5%, 90%);
+  --cor-fonte-3: hsl(14, 45%, 64%);
+  --cor-fonte-4: hsl(332, 51%, 68%);
+  --cor-fundo-1: hsl(30, 54%, 15%);
+  --cor-fundo-2: hsl(0, 0%, 10%);
+  --cor-fundo-3: hsl(330, 100%, 12%);
+  --cor-fundo-4: hsl(30, 18%, 20%);
+}
+
+:root[data-theme='light-dark'] {
+  --cor-fonte-1: light-dark(hsl(30, 10%, 34%), hsl(30, 10%, 80%));
+  --cor-fonte-2: light-dark(hsl(24, 5%, 18%), hsl(24, 5%, 90%));
+  --cor-fonte-3: light-dark(hsl(14, 45%, 36%), hsl(14, 45%, 64%));
+  --cor-fonte-4: light-dark(hsl(332, 51%, 32%), hsl(332, 51%, 68%));
+  --cor-fundo-1: light-dark(hsl(30, 54%, 90%), hsl(30, 54%, 15%));
+  --cor-fundo-2: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 10%));
+  --cor-fundo-3: light-dark(hsl(330, 100%, 98%), hsl(330, 100%, 12%));
+  --cor-fundo-4: light-dark(hsl(30, 18%, 87%), hsl(30, 18%, 20%));
+}
+
+.cor-fonte-1 { color: var(--cor-fonte-1); }
+.cor-fonte-2 { color: var(--cor-fonte-2); }
+.cor-fonte-3 { color: var(--cor-fonte-3); }
+.cor-fonte-4 { color: var(--cor-fonte-4); }
+
+ol li::marker, ul li::marker { color: var(--cor-fonte-3); }
+aside ul li::marker { color: var(--cor-fonte-4); }
+
+.cor-fundo-1 { background-color: var(--cor-fundo-1); }
+.cor-fundo-2 { background-color: var(--cor-fundo-2); }
+.cor-fundo-3 { background-color: var(--cor-fundo-3); }
+.cor-fundo-4 { background-color: var(--cor-fundo-4); }
 
 .fonte-1 { font: var(--fonte-1); }
 .fonte-2 { font: var(--fonte-2); }
 .fonte-3 { font: var(--fonte-3); }
 .fonte-4 { font: var(--fonte-4); }
 .fonte-5 { font: var(--fonte-5); }
+.fonte-6 { font: var(--fonte-6); }
 
-.cor-pedra-600 { color: var(--pedra-600); }
-.cor-pedra-900 { color: var(--pedra-900); }
-.cor-marrom, ol li::marker, ul li::marker { color: var(--marrom-800); }
-.cor-rosa, aside ul li::marker { color: var(--rosa-800); }
+html, body {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+.tema {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.7;
+  padding: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.tema:hover {
+  background-color: var(--cor-fundo-1);
+  cursor: pointer;
+}
+
+/* Estilo da modal */
+.modal {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Estilo do conteúdo da modal  */
+.conteudo-modal {
+  border: 1px solid #888;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15% auto;
+  max-width: 20rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Estilo do botão de fechar da modal  */
+.fechar-modal {
+  align-self: center;
+}
+
+.fechar-modal:hover,
+.fechar-modal:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para os botões de mudança de cor da modal interativa */
+form {
+  text-align: left;
+}
+
+input:hover, label:hover {
+  cursor: pointer;
+}
 
 main {
-  background-color: var(--branco);
   border-radius: 1.5rem;
+  margin: 7.75rem auto;
   width: clamp(20rem, 95vw, 46rem);
 }
 
@@ -64,7 +157,6 @@ article {
 }
 
 aside {
-  background-color: var(--rosa-50);
   border-radius: 0.5rem;
   padding: 1rem 1.5rem 0.5rem;
 }
@@ -75,7 +167,7 @@ h1, h2 {
 
 hr {
   border: none;
-  border-top: 0.1rem solid var(--pedra-150);
+  border-top: 0.1rem solid var(--cor-fundo-4);
 }
 
 ol, ul {
@@ -93,9 +185,7 @@ table {
 }
 
 td {
-  border-bottom: 0.1rem solid var(--pedra-150);
-  color: var(--pedra-600);
-  font: var(--fonte-2);
+  border-bottom: 0.1rem solid var(--cor-fundo-4);
   padding: 1rem;
 }
 
@@ -104,11 +194,9 @@ td {
 }
 
 @media only screen and (max-width: 426px) {
-  body {
-    height: 100vh;
-  }
   main {
     border-radius: 0;
+    margin: 0;
     width: 100%;
   }
   img {
