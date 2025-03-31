@@ -5,12 +5,12 @@
 :root {
   color-scheme: light dark;
 
-  --fonte-1: 400 clamp(1.875rem, 1.69642857142857rem + 0.892857142857143vw, 2.5rem)/150% "Young Serif", serif;
-  --fonte-2: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif;
-  --fonte-3: 600 clamp(1rem, 0.964285714285714rem + 0.178571428571429vw, 1.125rem)/150% "Outfit", sans-serif;
-  --fonte-4: 700 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif;
-  --fonte-5: 400 clamp(1.25rem, 1.14285714285714rem + 0.535714285714286vw, 1.625rem)/150% "Young Serif", serif;
-  --fonte-6: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/200% "Outfit", sans-serif;
+  --fonte-1: 400 clamp(1.875rem, 1.69642857142857rem + 0.892857142857143vw, 2.5rem)/150% "Young Serif", serif; /* min: 30px, max: 40px */
+  --fonte-5: 400 clamp(1.25rem, 1.14285714285714rem + 0.535714285714286vw, 1.625rem)/150% "Young Serif", serif; /* min: 20px, max: 26px */
+  --fonte-3: 600 clamp(1rem, 0.964285714285714rem + 0.178571428571429vw, 1.125rem)/150% "Outfit", sans-serif; /* min: 16px, max: 18px */
+  --fonte-4: 700 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif; /* min: 14px, max: 16px */
+  --fonte-2: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Outfit", sans-serif; /* min: 14px, max: 16px */
+  --fonte-6: 400 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/200% "Outfit", sans-serif; /* min: 14px, max: 16px */
 }
 
 :root[data-theme='light'] {
@@ -76,7 +76,7 @@ html, body {
   margin: 0;
 }
 
-.tema {
+.abrir-modal {
   background-color: transparent;
   border: none;
   border-radius: 50%;
@@ -87,12 +87,11 @@ html, body {
   top: 1rem;
 }
 
-.tema:hover {
+.abrir-modal:hover {
   background-color: var(--cor-fundo-1);
   cursor: pointer;
 }
 
-/* Estilo da modal */
 .modal {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
@@ -106,7 +105,6 @@ html, body {
   z-index: 1;
 }
 
-/* Estilo do conteúdo da modal  */
 .conteudo-modal {
   border: 1px solid #888;
   border-radius: 1.25rem;
@@ -120,7 +118,11 @@ html, body {
   width: 100%;
 }
 
-/* Estilo do botão de fechar da modal  */
+aside p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 .fechar-modal {
   align-self: center;
 }
@@ -131,7 +133,6 @@ html, body {
   cursor: pointer;
 }
 
-/* Estilos para os botões de mudança de cor da modal interativa */
 form {
   text-align: left;
 }

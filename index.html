@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark"/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -15,8 +16,8 @@
 
   <aside id="minha-modal" class="modal">
     <div class="conteudo-modal cor-fundo-1">
-      <p class="fonte-5 cor-fonte-2">Choose the theme:</p>
-      <span class="fechar-modal fonte-5 cor-fonte-2">&times;</span>
+      <p class="fonte-5 cor-fonte-4">Choose the theme:</p>
+      <span class="fechar-modal fonte-5 cor-fonte-4">&times;</span>
       <form>
         <input type="radio" id="default" name="tema" value="light-dark" checked/>
         <label for="default" class="fonte-6 cor-fonte-1">System default</label><br/>
@@ -27,25 +28,26 @@
       </form>
     </div>
   </aside>
-  <button id="abrir-modal" class="tema" title="Theme">&#127763;</button>
+  <button id="abrir-modal" class="abrir-modal" title="Theme">&#127763;</button>
 
   <main class="cor-fundo-2">
     <img alt="Omelette color photo" src="assets/images/image-omelette.jpeg"/>
     <article>
+      
       <section>
         <h1 class="fonte-1 cor-fonte-2">Simple Omelette Recipe</h1>
-        
         <p class="fonte-2 cor-fonte-1">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
       </section>
+
       <aside class="cor-fundo-3">
         <span class="fonte-3 cor-fonte-4">Preparation time</span>
-        
         <ul>
           <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Total: </span>Approximately 10 minutes</li>
           <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Preparation: </span>5 minutes</li>
           <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Cooking: </span>5 minutes</li>
         </ul>
       </aside>
+
       <section>
         <h2 class="fonte-5 cor-fonte-3">Ingredients</h2>
         <ul>
@@ -56,7 +58,9 @@
           <li class="fonte-2 cor-fonte-1">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </section>
+
       <hr/>
+
       <section>
         <h2 class="fonte-5 cor-fonte-3">Instructions</h2>
         <ol>
@@ -68,7 +72,9 @@
           <li class="fonte-2 cor-fonte-1"><span class="fonte-4">Enjoy: </span>Serve hot, with additional salt and pepper if needed.</li>
         </ol>
       </section>
+
       <hr/>
+
       <section>
         <h2 class="fonte-5 cor-fonte-3">Nutrition</h2>
         <p class="fonte-2 cor-fonte-1">The table below shows nutritional values per serving without the additional fillings.</p>
@@ -91,6 +97,7 @@
           </tr>
         </table>
       </section>
+
     </article>
   </main>
   <!-- <div class="attribution">
